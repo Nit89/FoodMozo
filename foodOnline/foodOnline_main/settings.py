@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'foodOnline_db',
         'USER':'postgres',
-        'PASSWORD':'admin',
+        'PASSWORD':'root',
         'HOST':'localhost',
         
         
