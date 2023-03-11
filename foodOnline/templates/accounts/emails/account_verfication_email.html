@@ -1,0 +1,9 @@
+{% autoescape off %}
+
+hii {{user.first_name}},
+
+Please click on below link to confirm your registration from nitesh project hi ha haa haa.
+
+http://{{domain}}{% url 'activate' uidb64=uid token=token  %}
+
+{% endautoescape  %}
