@@ -111,8 +111,8 @@ class UserProfile(models.Model):
         return self.user.email  
     
 
-    #     profile = UserProfile.objects.create(user=instance)
-    #     profile.save()
+        # profile = UserProfile.objects.create(user=instance)
+        # profile.save()
         
         
 
