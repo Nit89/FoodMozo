@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'accounts',
     'vendor',
     'menu',
-    'marketplace'
+    'marketplace',
+    'customers',
+    'orders'
 ]
 
 MIDDLEWARE = [
@@ -70,6 +72,7 @@ TEMPLATES = [
                 'marketplace.context_processors.get_cart_counter',
                 'marketplace.context_processors.get_cart_amounts',
                 'accounts.context_processors.get_user_profile',
+                'accounts.context_processors.get_paypal_client_id',
             
             ],
         },
@@ -155,4 +158,7 @@ DEFAULT_FROM_EMAIL = 'foodOnline Marketplace <djangofoodonline95@gmail.com>'
 
 # EMAIL_HOST_PASSWORD = "qwert@898"
 EMAIL_USE_TLS = True
+
+PAYPAL_CLIENT_ID= "AU3VH8NGU2o-k8zMR1vywlSAEifpL1GqnQ_gS8gs_3FvRGwaUJSNeuWhPXDGlQ95ao2b6bp13OTCOfJ5"
+SECURE_CROSS_ORIGIN_OPENER_POLICY = 'same-origin-allow-popups'
 
