@@ -151,17 +151,15 @@ MEDIA_ROOT = BASE_DIR /'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Email configuration
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'nitesh387singh@gmail.com'
-EMAIL_HOST_PASSWORD = "zbllszlipcbjrgnr"
-DEFAULT_FROM_EMAIL = 'foodOnline Marketplace <nitesh387singh@gmail.com>'
-
-# EMAIL_HOST_PASSWORD = "qwert@898"
+EMAIL_HOST = config('EMAIL_HOST')
+EMAIL_PORT = config('EMAIL_PORT', cast=int)
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'foodOnline Marketplace <django.foodonline@gmail.com>'
 
-PAYPAL_CLIENT_ID= "AU3VH8NGU2o-k8zMR1vywlSAEifpL1GqnQ_gS8gs_3FvRGwaUJSNeuWhPXDGlQ95ao2b6bp13OTCOfJ5"
+PAYPAL_CLIENT_ID = config('PAYPAL_CLIENT_ID')
 SECURE_CROSS_ORIGIN_OPENER_POLICY = 'same-origin-allow-popups'
 
-RZP_KEY_ID = "rzp_test_LMDviQalRygeac"
-RZP_KEY_SECRET = "zE9knTYz9WsM6diTmtqA03TZ"
+RZP_KEY_ID = config('RZP_KEY_ID')
+RZP_KEY_SECRET = config('RZP_KEY_SECRET')
