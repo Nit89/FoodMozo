@@ -152,9 +152,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Email configuration
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'djangofoodonline95@gmail.com'
-EMAIL_HOST_PASSWORD = "anntjayhixsorcyp"
-DEFAULT_FROM_EMAIL = 'foodOnline Marketplace <djangofoodonline95@gmail.com>'
+EMAIL_HOST_USER = 'nitesh387singh@gmail.com'
+EMAIL_HOST_PASSWORD = "zbllszlipcbjrgnr"
+DEFAULT_FROM_EMAIL = 'foodOnline Marketplace <nitesh387singh@gmail.com>'
 
 # EMAIL_HOST_PASSWORD = "qwert@898"
 EMAIL_USE_TLS = True
