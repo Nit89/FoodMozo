@@ -114,9 +114,9 @@ def place_order(request):
             context = {
                 'order': order,
                 'cart_items': cart_items,
-                # 'rzp_order_id': rzp_order_id,
-                # 'RZP_KEY_ID': RZP_KEY_ID,
-                # 'rzp_amount': float(order.total) * 100,
+                'rzp_order_id': rzp_order_id,
+                'RZP_KEY_ID': RZP_KEY_ID,
+                'rzp_amount': float(order.total) * 100,
             }
             return render(request, 'orders/place_order.html', context)
             

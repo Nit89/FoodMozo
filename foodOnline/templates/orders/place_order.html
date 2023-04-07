@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+
+{% load static %}
 {% block content %}
 
 <div class="main-section pt-5">
@@ -187,7 +189,8 @@
 
     }).render('#paypal-button-container');
 
-    {% comment %} var options = {
+
+    var options = {
             "key": "{{ RZP_KEY_ID }}", // Enter the Key ID generated from the Dashboard
             "amount": "{{ rzp_amount }}", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
             "currency": "INR",
@@ -231,10 +234,12 @@
                 alert(response.error.metadata.order_id);
                 alert(response.error.metadata.payment_id);
         });
-        document.getElementById('rzp-button1').onclick = function(e){
+    document.getElementById('rzp-button1').onclick = function(e){
         rzp1.open();
         e.preventDefault();
-   } {% endcomment %}
+}
+
+   
 
     function sendTransaction(transaction_id, payment_method, status){
         $.ajax({
