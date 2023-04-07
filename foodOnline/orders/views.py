@@ -13,10 +13,11 @@ from django.contrib.auth.decorators import login_required
 import razorpay
 
 from django.contrib.sites.shortcuts import get_current_site
+from foodOnline_main.settings import RZP_KEY_ID,RZP_KEY_SECRET
 
 
 
-# client = razorpay.Client(auth=(RZP_KEY_ID, RZP_KEY_SECRET))
+client = razorpay.Client(auth=(RZP_KEY_ID, RZP_KEY_SECRET))
 
 
 
@@ -96,18 +97,19 @@ def place_order(request):
             # order.vendors.add(*vendors_ids)
             # order.save()
 
-            # # RazorPay Payment
-            # DATA = {
-            #     "amount": float(order.total) * 100,
-            #     "currency": "INR",
-            #     "receipt": "receipt #"+order.order_number,
-            #     "notes": {
-            #         "key1": "value3",
-            #         "key2": "value2"
-            #     }
-            # }
-            # rzp_order = client.order.create(data=DATA)
-            # rzp_order_id = rzp_order['id']
+            # RazorPay Payment
+            DATA = {
+                "amount": float(order.total) * 100,
+                "currency": "INR",
+                "receipt": "receipt #"+order.order_number,
+                "notes": {
+                    "key1": "value3",
+                    "key2": "value2"
+                }
+            }
+            rzp_order = client.order.create(data=DATA)
+            rzp_order_id = rzp_order['id']
+            print(rzp_order)
 
             context = {
                 'order': order,

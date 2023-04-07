@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,10 +21,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-wd&-+&z6)gzn3fl)#yk=uqloulwv@i+!g2bxghymp*#5n!s91#'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG',cast=bool)
 
 ALLOWED_HOSTS = []
 
@@ -162,3 +163,5 @@ EMAIL_USE_TLS = True
 PAYPAL_CLIENT_ID= "AU3VH8NGU2o-k8zMR1vywlSAEifpL1GqnQ_gS8gs_3FvRGwaUJSNeuWhPXDGlQ95ao2b6bp13OTCOfJ5"
 SECURE_CROSS_ORIGIN_OPENER_POLICY = 'same-origin-allow-popups'
 
+RZP_KEY_ID = "rzp_test_LMDviQalRygeac"
+RZP_KEY_SECRET = "zE9knTYz9WsM6diTmtqA03TZ"
