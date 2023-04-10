@@ -4,6 +4,7 @@ from django.contrib import messages
 
 from accounts.forms import UserProfileForm
 from menu.models import Category, FoodItem
+from orders.models import Order, OrderedFood
 from menu.forms import CategoryForm,FoodItemForm
 from .forms import VendorForm
 from accounts.models import UserProfile
@@ -177,3 +178,22 @@ def delete_food(request, pk=None):
     food.delete()
     messages.success(request, 'Food Item has been deleted successfully!')
     return redirect('fooditems_by_category', food.category.id)
+
+
+def order_detail(request, order_number):
+    try:
+        order = Order.objects.get(order_number=order_number, is_ordered=True)
+        ordered_food = OrderedFood.objects.filter(order=order, fooditem__vendor=get_vendor(request))
+        
+        
+
+        context = {
+            'order': order,
+            'ordered_food': ordered_food,
+            # 'subtotal': order.get_total_by_vendor()['subtotal'],
+            # 'tax_data': order.get_total_by_vendor()['tax_dict'],
+            # 'grand_total': order.get_total_by_vendor()['grand_total'],
+        }
+    except:
+        return redirect('vendor')
+    return render(request, 'vendor/order_detail.html',context)
