@@ -99,7 +99,7 @@ $(document).ready(function(){
                     // subtotal, tax and grand total
                     applyCartAmounts(
                         response.cart_amount['subtotal'],
-                        // response.cart_amount['tax_dict'],
+                        response.cart_amount['tax_dict'],
                         response.cart_amount['grand_total']
                     )
                 }
@@ -293,14 +293,3 @@ $(document).ready(function(){
 
    // document ready close 
 });
-
-
-
-// $(document).ready(function(){
-//     $('.add_to_cart').on('click',function(e){
-//         e.preventDefault();
-//         alert('test123');
-//     })
-
-    
-// });
