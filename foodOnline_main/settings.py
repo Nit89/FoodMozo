@@ -90,7 +90,7 @@ WSGI_APPLICATION = 'foodOnline_main.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'foodOnline_db',
+        'NAME': 'foodonline_db',
         'USER':'postgres',
         'PASSWORD':'root',
         'HOST':'localhost',
