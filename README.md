@@ -1,7 +1,7 @@
 
 # FoodMozo(Multi-vendor Restaurant Marketplace website) 
 
-# live links 
+# Live links 
 https://foodmozo.quest/
 or
 https://ec2-65-1-94-96.ap-south-1.compute.amazonaws.com
