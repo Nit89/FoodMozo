@@ -14,11 +14,17 @@ This repository contains the source code for a comprehensive food delivery platf
 
 ## Table of Content
 1.Features
+
 2.Technologies Used
+
 3.Setup and Installation
+
 4.Usage
+
 5.Contributing
+
 6.License 
+
 ## Features
 
 The platform includes a variety of features:
