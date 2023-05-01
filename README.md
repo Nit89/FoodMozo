@@ -1,6 +1,12 @@
 
 # FoodMozo(Multi-vendor Restaurant Marketplace website) 
 
+# live links 
+https://foodmozo.quest/
+or
+https://ec2-65-1-94-96.ap-south-1.compute.amazonaws.com
+
+
 A brief description of what this project does and who it's for
 This repository contains the source code for a comprehensive food delivery platform developed using Django, PostgreSQL, AJAX, and a host of other technologies.
 
