@@ -147,7 +147,7 @@ For full details and other endpoints, please refer to the PayPal API documentati
 
 **Server:** Django
 
-**others**
+**others:**
 PostgreSQL,
 AJAX,
 AWS,
